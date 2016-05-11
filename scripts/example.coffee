@@ -15,7 +15,7 @@ module.exports = (robot) ->
         res.send "Date: #{data.date}"
         for i in data.holidays
           do (i) ->
-            res.send "Today is #{i.name}!\n (#{i.url})\n\n"
+            res.send "Today is #{i.name}!\n (#{i.url})"
         return
 
   robot.hear /tomorrow/i, (res) ->
@@ -30,7 +30,7 @@ module.exports = (robot) ->
         res.send "Date: #{data.date}"
         for i in data.holidays
           do (i) ->
-            res.send "Tomorrow is #{i.name}!\n (#{i.url})\n\n"
+            res.send "Tomorrow is #{i.name}!\n (#{i.url})"
         return
 
   robot.hear /yesterday/i, (res) ->
@@ -45,5 +45,5 @@ module.exports = (robot) ->
         res.send "Date: #{data.date}"
         for i in data.holidays
           do (i) ->
-            res.send "Yesterday was #{i.name}!\n (#{i.url})\n\n"
+            res.send "Yesterday was #{i.name}!\n (#{i.url})"
         return
